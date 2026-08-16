@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { Cta, waLink } from "@/components/site/Cta";
 import ruan1 from "@/assets/ruan-1.png.asset.json";
-import ruan2 from "@/assets/ruan-2.png.asset.json";
+import handshake from "@/assets/handshake.jpg.asset.json";
 import signingWide from "@/assets/signing-wide.jpg.asset.json";
 import signingForm from "@/assets/signing-form.jpg.asset.json";
 
