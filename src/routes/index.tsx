@@ -89,12 +89,12 @@ function Index() {
         <img
           src={signingWide.url}
           alt="Assinatura de documentos em ambiente corporativo"
-          className="absolute inset-0 h-full w-full scale-105 object-cover object-center brightness-[3] contrast-[0.95] saturate-[0.8]"
+          className="absolute inset-0 h-full w-full scale-105 object-cover object-center brightness-[2.1] contrast-[0.98] saturate-[0.85]"
           width={1920}
           height={1080}
         />
         <div
-          className="absolute inset-0 bg-[radial-gradient(70%_60%_at_50%_50%,color-mix(in_oklab,var(--brand-deep)_18%,transparent)_0%,color-mix(in_oklab,var(--brand-deep)_45%,transparent)_58%,color-mix(in_oklab,var(--brand-deep)_88%,transparent)_100%)]"
+          className="absolute inset-0 bg-[radial-gradient(70%_60%_at_50%_50%,color-mix(in_oklab,var(--brand-deep)_40%,transparent)_0%,color-mix(in_oklab,var(--brand-deep)_66%,transparent)_58%,color-mix(in_oklab,var(--brand-deep)_92%,transparent)_100%)]"
           aria-hidden
         />
         <div
