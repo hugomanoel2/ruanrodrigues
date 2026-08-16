@@ -415,11 +415,8 @@ function Index() {
 
       {/* 8 — AUTORIDADE */}
       <section id="sobre" className="section-base section-light">
-        <Split
-          eyebrow="Autoridade"
-          title="Dr. Ruan Rodrigues"
-          imageSide="left"
-          image={
+        <div className="shell grid gap-8 md:grid-cols-2 md:items-center md:gap-12">
+          <Reveal delay={120} className="order-2 md:order-1">
             <div className="framed mx-auto w-full max-w-sm">
               <img
                 src={ruan1}
@@ -429,21 +426,30 @@ function Index() {
                 height={1350}
               />
             </div>
-          }
-        >
-          <p>
-            Advocacia direcionada a empresários e empreendedores que buscam orientação jurídica para
-            proteger suas marcas.
-          </p>
-          <p>
-            Atendimento individual desde a análise inicial até o acompanhamento do processo perante o
-            INPI.
-          </p>
-          <p className="text-sm font-bold tracking-[0.18em] text-brand uppercase">OAB [NÚMERO]</p>
-          <div className="flex justify-center pt-2 md:justify-start">
-            <Cta intent="analisar">Quero falar com o Dr. Ruan</Cta>
+          </Reveal>
+
+          <div className="contents md:order-2 md:block">
+            <Reveal className="order-1">
+              <Head eyebrow="Autoridade" title="Dr. Ruan Rodrigues" />
+            </Reveal>
+            <Reveal delay={200} className="order-3 md:mt-5">
+              <div className="section-head flex flex-col gap-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+                <p>
+                  Advocacia direcionada a empresários e empreendedores que buscam orientação jurídica
+                  para proteger suas marcas.
+                </p>
+                <p>
+                  Atendimento individual desde a análise inicial até o acompanhamento do processo
+                  perante o INPI.
+                </p>
+                <p className="text-sm font-bold tracking-[0.18em] text-brand uppercase">OAB [NÚMERO]</p>
+                <div className="flex justify-center pt-2 md:justify-start">
+                  <Cta intent="analisar">Quero falar com o Dr. Ruan</Cta>
+                </div>
+              </div>
+            </Reveal>
           </div>
-        </Split>
+        </div>
       </section>
 
       {/* 9 — IDENTIFICAÇÃO */}
