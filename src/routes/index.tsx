@@ -89,18 +89,19 @@ function Index() {
         <img
           src={signingWide.url}
           alt="Assinatura de documentos em ambiente corporativo"
-          className="absolute inset-0 h-full w-full scale-105 object-cover object-center"
+          className="absolute inset-0 h-full w-full scale-105 object-cover object-center brightness-[1.12] contrast-[1.05]"
           width={1920}
           height={1080}
         />
         <div
-          className="absolute inset-0 bg-[radial-gradient(75%_65%_at_50%_45%,color-mix(in_oklab,var(--brand-deep)_78%,transparent)_0%,color-mix(in_oklab,var(--brand-deep)_92%,transparent)_60%,var(--brand-deep)_100%)]"
+          className="absolute inset-0 bg-[radial-gradient(70%_60%_at_50%_50%,color-mix(in_oklab,var(--brand-deep)_46%,transparent)_0%,color-mix(in_oklab,var(--brand-deep)_74%,transparent)_58%,color-mix(in_oklab,var(--brand-deep)_94%,transparent)_100%)]"
           aria-hidden
         />
         <div
-          className="absolute inset-0 bg-[linear-gradient(to_bottom,color-mix(in_oklab,var(--brand-deep)_85%,transparent)_0%,transparent_35%,transparent_60%,var(--brand-deep)_100%)]"
+          className="absolute inset-0 bg-[linear-gradient(to_bottom,color-mix(in_oklab,var(--brand-deep)_72%,transparent)_0%,transparent_30%,transparent_62%,var(--brand-deep)_100%)]"
           aria-hidden
         />
+
         <div className="shell relative">
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
             <span className="eyebrow rounded-full border border-gold/30 bg-[color-mix(in_oklab,black_35%,transparent)] px-4 py-2 text-gold backdrop-blur-sm">
