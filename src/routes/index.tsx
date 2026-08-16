@@ -13,6 +13,7 @@ import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 import ruan1 from "@/assets/ruan-1.png.asset.json";
 import handshake from "@/assets/handshake.jpg.asset.json";
 import signingWide from "@/assets/signing-wide.jpg.asset.json";
+import heroLoop from "@/assets/hero-loop.mp4.asset.json";
 import signingForm from "@/assets/signing-form.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
