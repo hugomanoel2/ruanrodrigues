@@ -85,34 +85,35 @@ function Index() {
     <main id="top" className="pb-24 md:pb-0">
       <Header />
       {/* 1 — HERO */}
-      <section className="section-base section-dark !pt-16 md:!pt-28 md:!pb-28">
+      <section className="section-base section-dark flex min-h-[92svh] items-center !pt-32 !pb-24 md:!pt-40 md:!pb-32">
         <img
           src={signingWide.url}
           alt="Assinatura de documentos em ambiente corporativo"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full scale-105 object-cover object-center"
           width={1920}
           height={1080}
         />
         <div
-          className="absolute inset-0 bg-[linear-gradient(105deg,var(--brand-deep)_0%,color-mix(in_oklab,var(--brand-deep)_92%,transparent)_38%,color-mix(in_oklab,var(--brand)_55%,transparent)_72%,transparent_100%)]"
+          className="absolute inset-0 bg-[radial-gradient(75%_65%_at_50%_45%,color-mix(in_oklab,var(--brand-deep)_78%,transparent)_0%,color-mix(in_oklab,var(--brand-deep)_92%,transparent)_60%,var(--brand-deep)_100%)]"
           aria-hidden
         />
         <div
-          className="absolute inset-0 bg-[linear-gradient(to_top,var(--brand-deep)_0%,transparent_55%)]"
+          className="absolute inset-0 bg-[linear-gradient(to_bottom,color-mix(in_oklab,var(--brand-deep)_85%,transparent)_0%,transparent_35%,transparent_60%,var(--brand-deep)_100%)]"
           aria-hidden
         />
         <div className="shell relative">
-          <div className="section-head flex max-w-2xl flex-col gap-6">
-            <span className="eyebrow text-gold">
+          <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
+            <span className="eyebrow rounded-full border border-gold/30 bg-[color-mix(in_oklab,black_35%,transparent)] px-4 py-2 text-gold backdrop-blur-sm">
               <span className="rule-gold" aria-hidden />
               Registro de marca · INPI
             </span>
-            <h1 className="text-4xl leading-[1.02] font-black text-on-dark sm:text-5xl md:text-6xl">
+            <h1 className="text-[2.1rem] leading-[1.03] font-black text-on-dark drop-shadow-[0_8px_30px_rgba(0,0,0,0.55)] sm:text-5xl md:text-6xl">
               Proteja a marca que você está construindo.
             </h1>
+            <span className="rule-gold" aria-hidden />
             <p className="max-w-xl text-base leading-relaxed text-on-dark-muted md:text-lg">
-              Registro de marca no INPI com análise de viabilidade e acompanhamento jurídico
-              durante o processo.
+              Registro de marca no INPI com análise de viabilidade e acompanhamento jurídico durante
+              todo o processo, direto com um advogado.
             </p>
             <div className="pt-2">
               <Cta intent="analisar">Quero analisar minha marca</Cta>
@@ -120,6 +121,7 @@ function Index() {
           </div>
         </div>
       </section>
+
 
       {/* 2 — PROBLEMA */}
       <section id="problema" className="section-base section-light">
