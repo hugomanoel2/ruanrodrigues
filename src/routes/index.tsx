@@ -10,11 +10,11 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Reveal } from "@/components/site/Reveal";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
-import ruan1 from "@/assets/ruan-1.png.asset.json";
-import handshake from "@/assets/handshake.jpg.asset.json";
-import signingWide from "@/assets/signing-wide.jpg.asset.json";
-import heroLoop from "@/assets/hero-loop.mp4.asset.json";
-import signingForm from "@/assets/signing-form.jpg.asset.json";
+import ruan1 from "@/assets/ruan-1.png";
+import handshake from "@/assets/handshake.jpg";
+import signingWide from "@/assets/signing-wide.jpg";
+import heroLoop from "@/assets/hero-loop.mp4";
+import signingForm from "@/assets/signing-form.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -133,8 +133,8 @@ function Index() {
       <section className="section-base section-dark flex min-h-[82svh] items-center !pt-32 !pb-20 md:!pt-36 md:!pb-28">
         <video
           className="absolute inset-0 h-full w-full scale-105 object-cover object-center brightness-[1.9] contrast-[0.98] saturate-[0.8]"
-          src={heroLoop.url}
-          poster={signingWide.url}
+          src={heroLoop}
+          poster={signingWide}
           autoPlay
           loop
           muted
@@ -277,7 +277,7 @@ function Index() {
           image={
             <div className="framed mx-auto w-full max-w-md">
               <img
-                src={signingForm.url}
+                src={signingForm}
                 alt="Análise documental de viabilidade de registro de marca"
                 className="h-full w-full object-cover"
                 width={1200}
@@ -379,7 +379,7 @@ function Index() {
           image={
             <div className="framed mx-auto w-full max-w-md">
               <img
-                src={handshake.url}
+                src={handshake}
                 alt="Aperto de mãos após acordo jurídico"
                 className="h-full w-full object-cover"
                 width={1200}
@@ -422,7 +422,7 @@ function Index() {
           image={
             <div className="framed mx-auto w-full max-w-sm">
               <img
-                src={ruan1.url}
+                src={ruan1}
                 alt="Retrato profissional do Dr. Ruan Rodrigues"
                 className="h-full w-full object-cover"
                 width={1080}
@@ -526,7 +526,7 @@ function Index() {
       {/* 11 — CTA FINAL */}
       <section className="section-base section-dark edge-gold glow-ambient">
         <img
-          src={signingWide.url}
+          src={signingWide}
           alt=""
           aria-hidden
           className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10"
