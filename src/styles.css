@@ -192,55 +192,65 @@
   background-color: var(--brand-deep);
 }
 
-/* ---------- CTA glow ---------- */
-@utility cta-glow {
+/* ---------- Botões ---------- */
+@utility btn-base {
   position: relative;
-  isolation: isolate;
-  background: var(--gradient-gold);
-  color: var(--brand-deep);
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
   border-radius: 999px;
-  box-shadow: var(--shadow-glow);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1;
   transition:
-    transform 220ms ease,
-    box-shadow 220ms ease;
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease;
 
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    z-index: -1;
-    background: linear-gradient(
-      100deg,
-      transparent 20%,
-      color-mix(in oklab, white 75%, transparent) 45%,
-      transparent 65%
-    );
-    background-size: 220% 100%;
-    animation: cta-sheen 3.4s linear infinite;
-    mix-blend-mode: overlay;
-    pointer-events: none;
+  & .btn-arrow {
+    transition: transform 220ms ease;
   }
+  &:hover .btn-arrow {
+    transform: translateX(3px);
+  }
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@utility btn-gold {
+  background-image: var(--gradient-gold);
+  color: var(--brand-deep);
+  border: 1px solid color-mix(in oklab, var(--gold) 65%, white);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, white 55%, transparent),
+    0 10px 26px -14px color-mix(in oklab, var(--gold) 80%, transparent);
 
   &:hover {
-    transform: translateY(-2px);
     box-shadow:
-      0 0 0 1px color-mix(in oklab, var(--gold) 60%, transparent),
-      0 22px 55px -14px color-mix(in oklab, var(--gold) 75%, transparent);
+      inset 0 1px 0 color-mix(in oklab, white 65%, transparent),
+      0 18px 38px -16px color-mix(in oklab, var(--gold) 90%, transparent);
   }
 }
 
-@keyframes cta-sheen {
-  0% {
-    background-position: 130% 0;
-  }
-  100% {
-    background-position: -130% 0;
+@utility btn-outline {
+  background-color: transparent;
+  color: var(--brand);
+  border: 1px solid color-mix(in oklab, var(--brand) 30%, transparent);
+
+  &:hover {
+    background-color: var(--brand);
+    color: var(--on-dark);
+    border-color: var(--brand);
   }
 }
+
 
 @utility glow-ambient {
   &::before {
