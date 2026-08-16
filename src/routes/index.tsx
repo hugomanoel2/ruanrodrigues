@@ -8,6 +8,7 @@ import {
 import { Cta, waLink } from "@/components/site/Cta";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { Reveal } from "@/components/site/Reveal";
 import ruan1 from "@/assets/ruan-1.png.asset.json";
 import handshake from "@/assets/handshake.jpg.asset.json";
 import signingWide from "@/assets/signing-wide.jpg.asset.json";
@@ -103,11 +104,7 @@ function Index() {
         />
 
         <div className="shell relative">
-          <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 rounded-[2.25rem] border border-gold/15 bg-[color-mix(in_oklab,var(--brand-deep)_62%,transparent)] px-6 py-12 text-center shadow-[0_40px_120px_-40px_rgba(0,0,0,0.8)] backdrop-blur-[3px] md:px-14 md:py-16">
-            <span className="eyebrow rounded-full border border-gold/30 bg-[color-mix(in_oklab,black_35%,transparent)] px-4 py-2 text-gold backdrop-blur-sm">
-              <span className="rule-gold" aria-hidden />
-              Registro de marca · INPI
-            </span>
+          <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-2 text-center md:px-6">
             <h1 className="text-[2.1rem] leading-[1.03] font-black text-on-dark drop-shadow-[0_8px_30px_rgba(0,0,0,0.55)] sm:text-5xl md:text-6xl">
               Proteja a marca que você está construindo.
             </h1>
@@ -177,6 +174,7 @@ function Index() {
             tone="dark"
             eyebrow="Risco"
             title="O que está em jogo quando sua marca não está registrada?"
+            center
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
             {[
@@ -209,7 +207,7 @@ function Index() {
               </article>
             ))}
           </div>
-          <div className="mt-10 flex justify-center md:justify-start">
+          <div className="mt-10 flex justify-center">
             <Cta intent="registrar">Quero proteger minha marca</Cta>
           </div>
         </div>
@@ -250,7 +248,7 @@ function Index() {
       {/* 5 — COMO FUNCIONA */}
       <section id="processo" className="section-base section-light">
         <div className="shell">
-          <Head eyebrow="Como funciona" title="Do primeiro contato ao acompanhamento no INPI." />
+          <Head eyebrow="Como funciona" title="Do primeiro contato ao acompanhamento no INPI." center />
           <ol className="mt-12 grid gap-6 md:grid-cols-5">
             {[
               ["01", "Envie sua marca", "Informe o nome e a atividade do negócio."],
@@ -285,7 +283,7 @@ function Index() {
       {/* 6 — BENEFÍCIOS */}
       <section id="beneficios" className="section-base section-tint">
         <div className="shell">
-          <Head eyebrow="Benefícios" title="Uma marca registrada é um ativo do seu negócio." />
+          <Head eyebrow="Benefícios" title="Uma marca registrada é um ativo do seu negócio." center />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
               ["Proteção", "Fortalece juridicamente a proteção do nome e da identidade da marca."],
@@ -388,12 +386,15 @@ function Index() {
       <section id="para-quem" className="section-base section-dark edge-gold">
 
         <div className="shell">
+          <Reveal>
           <Head
             tone="dark"
             eyebrow="Para quem é"
             title="Se existe uma marca por trás do seu negócio, vale verificar a proteção."
+            center
           />
-          <div className="mt-10 flex flex-wrap justify-center gap-3 md:justify-start">
+          </Reveal>
+          <div className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-3">
             {[
               "Empresas",
               "Empreendedores",
@@ -401,18 +402,17 @@ function Index() {
               "E-commerces",
               "Infoprodutos",
               "Aplicativos e negócios digitais",
-            ].map((i) => (
-              <span
-                key={i}
-                className="rounded-full border border-gold/30 bg-[color-mix(in_oklab,white_8%,transparent)] px-5 py-2.5 text-sm font-semibold text-on-dark backdrop-blur-sm"
-              >
-                {i}
-              </span>
+            ].map((i, idx) => (
+              <Reveal key={i} delay={idx * 90}>
+                <span className="block rounded-full border border-gold/30 bg-[color-mix(in_oklab,white_8%,transparent)] px-5 py-2.5 text-sm font-semibold text-on-dark backdrop-blur-sm transition-colors hover:border-gold/60 hover:bg-[color-mix(in_oklab,white_14%,transparent)]">
+                  {i}
+                </span>
+              </Reveal>
             ))}
           </div>
-          <div className="mt-10 flex justify-center md:justify-start">
+          <Reveal delay={620} className="mt-10 flex justify-center">
             <Cta intent="analisar">Analisar minha marca</Cta>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -479,11 +479,6 @@ function Index() {
             compromisso e falando diretamente com um advogado.
           </p>
           <Cta intent="analisar">Quero analisar minha marca</Cta>
-          <div className="flex flex-col items-center gap-1 text-sm text-on-dark-muted sm:flex-row sm:gap-6">
-            <span>Atendimento online em todo o Brasil</span>
-            <span className="hidden h-1 w-1 rounded-full bg-gold sm:block" aria-hidden />
-            <span>Resposta direta com o Dr. Ruan</span>
-          </div>
         </div>
       </section>
 
