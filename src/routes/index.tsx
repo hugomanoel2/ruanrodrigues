@@ -379,7 +379,8 @@ function Index() {
       </section>
 
       {/* 9 — IDENTIFICAÇÃO */}
-      <section className="section-base section-dark">
+      <section id="para-quem" className="section-base section-dark edge-gold">
+
         <div className="shell">
           <Head
             tone="dark"
