@@ -85,16 +85,16 @@ function Index() {
     <main id="top" className="pb-24 md:pb-0">
       <Header />
       {/* 1 — HERO */}
-      <section className="section-base section-dark flex min-h-[92svh] items-center !pt-32 !pb-24 md:!pt-40 md:!pb-32">
+      <section className="section-base section-dark flex min-h-[82svh] items-center !pt-32 !pb-20 md:!pt-36 md:!pb-28">
         <img
           src={signingWide.url}
           alt="Assinatura de documentos em ambiente corporativo"
-          className="absolute inset-0 h-full w-full scale-105 object-cover object-center brightness-[1.12] contrast-[1.05]"
+          className="absolute inset-0 h-full w-full scale-105 object-cover object-center brightness-[1.9] contrast-[1.02] saturate-[0.95]"
           width={1920}
           height={1080}
         />
         <div
-          className="absolute inset-0 bg-[radial-gradient(70%_60%_at_50%_50%,color-mix(in_oklab,var(--brand-deep)_46%,transparent)_0%,color-mix(in_oklab,var(--brand-deep)_74%,transparent)_58%,color-mix(in_oklab,var(--brand-deep)_94%,transparent)_100%)]"
+          className="absolute inset-0 bg-[radial-gradient(70%_60%_at_50%_50%,color-mix(in_oklab,var(--brand-deep)_28%,transparent)_0%,color-mix(in_oklab,var(--brand-deep)_58%,transparent)_58%,color-mix(in_oklab,var(--brand-deep)_88%,transparent)_100%)]"
           aria-hidden
         />
         <div
