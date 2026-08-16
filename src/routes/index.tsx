@@ -82,54 +82,45 @@ function Index() {
   return (
     <main className="pb-24 md:pb-0">
       {/* 1 — HERO */}
-      <section className="section-base section-dark glow-ambient !pt-14 md:!pt-24">
-        <div className="shell grid items-center gap-12 md:grid-cols-2 md:gap-14">
-          <div className="section-head flex flex-col gap-6">
+      <section className="section-base section-dark !pt-16 md:!pt-28 md:!pb-28">
+        <img
+          src={signingWide.url}
+          alt="Assinatura de documentos em ambiente corporativo"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          width={1920}
+          height={1080}
+        />
+        <div
+          className="absolute inset-0 bg-[linear-gradient(105deg,var(--brand-deep)_0%,color-mix(in_oklab,var(--brand-deep)_92%,transparent)_38%,color-mix(in_oklab,var(--brand)_55%,transparent)_72%,transparent_100%)]"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 bg-[linear-gradient(to_top,var(--brand-deep)_0%,transparent_55%)]"
+          aria-hidden
+        />
+        <div className="shell relative">
+          <div className="section-head flex max-w-2xl flex-col gap-6">
             <span className="eyebrow text-gold">
               <span className="rule-gold" aria-hidden />
               Registro de marca · INPI
             </span>
-            <h1 className="max-w-xl text-4xl leading-[1.02] font-black text-on-dark sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl leading-[1.02] font-black text-on-dark sm:text-5xl md:text-6xl">
               Proteja a marca que você está construindo.
             </h1>
             <p className="max-w-xl text-base leading-relaxed text-on-dark-muted md:text-lg">
               Registro de marca no INPI com análise de viabilidade e acompanhamento jurídico
               durante o processo.
             </p>
-            <ul className="flex flex-col items-center gap-2 text-sm font-medium text-on-dark md:items-start">
-              {["Análise prévia da marca", "Atendimento online em todo o Brasil"].map((i) => (
-                <li key={i} className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden />
-                  {i}
-                </li>
-              ))}
-            </ul>
-            <div className="flex flex-col items-center gap-3 md:items-start">
+            <div className="pt-2">
               <Cta intent="analisar">Quero analisar minha marca</Cta>
-              <p className="text-xs font-semibold tracking-wide text-gold uppercase">
-                Atendimento direto com advogado
-              </p>
-              <p className="text-sm text-on-dark-muted">
-                Fale diretamente com um advogado e entenda os próximos passos.
-              </p>
             </div>
-          </div>
-
-          <div className="framed mx-auto w-full max-w-md">
-            <img
-              src={ruan1.url}
-              alt="Dr. Ruan Rodrigues, advogado especializado em registro de marcas"
-              className="h-full w-full object-cover"
-              width={1080}
-              height={1350}
-            />
           </div>
         </div>
       </section>
 
       {/* 2 — PROBLEMA */}
       <section className="section-base section-light">
-        <div className="shell grid items-center gap-10 md:grid-cols-[1.1fr_1fr]">
+        <div className="shell grid items-center gap-12 md:grid-cols-[1fr_1fr]">
           <Head eyebrow="O ponto cego" title="Ter um CNPJ não significa ter sua marca registrada.">
             <p>
               Você pode ter empresa aberta, domínio, Instagram, identidade visual e usar o mesmo
@@ -143,24 +134,35 @@ function Index() {
               registrado.
             </p>
             <div className="flex justify-center pt-2 md:justify-start">
-              <Cta intent="analisar" size="md">
+              <Cta intent="analisar" size="md" variant="outline">
                 Verificar minha marca
               </Cta>
             </div>
           </Head>
 
-          <div className="rounded-2xl border border-border bg-card px-6 py-10 text-center shadow-[var(--shadow-soft)]">
-            <p className="font-display text-3xl leading-tight font-black text-brand sm:text-4xl">
-              CNPJ <span className="text-gold">≠</span>
-              <br />
-              Marca Registrada
-            </p>
-            <p className="mt-4 text-sm text-muted-foreground">
-              São procedimentos distintos, em órgãos distintos.
-            </p>
+          <div className="grid gap-4">
+            {[
+              ["Abertura da empresa", "Registra o CNPJ na Junta Comercial e na Receita Federal."],
+              ["Domínio e redes sociais", "Reservam apenas o endereço, não a marca."],
+              ["Registro no INPI", "É o procedimento que trata da proteção da marca."],
+            ].map(([t, d], i) => (
+              <article
+                key={t}
+                className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 text-left shadow-[var(--shadow-soft)] md:p-6"
+              >
+                <span className="font-display mt-0.5 text-sm font-black text-gold">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="text-base font-extrabold text-brand md:text-lg">{t}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{d}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
+
 
       {/* 3 — RISCO */}
       <section className="section-base section-dark">
