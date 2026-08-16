@@ -308,13 +308,14 @@ function Index() {
         <div className="shell grid items-center gap-12 md:grid-cols-2">
           <div className="framed mx-auto w-full max-w-md">
             <img
-              src={ruan2.url}
-              alt="Dr. Ruan Rodrigues em atendimento jurídico"
+              src={handshake.url}
+              alt="Aperto de mãos após acordo jurídico"
               className="h-full w-full object-cover"
-              width={1080}
-              height={1350}
+              width={1200}
+              height={1200}
             />
           </div>
+
           <div>
             <Head tone="dark" eyebrow="Diferencial" title="Seu pedido acompanhado por um advogado.">
               <p>Registrar uma marca envolve mais do que preencher um formulário.</p>
