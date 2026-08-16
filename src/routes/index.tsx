@@ -450,40 +450,36 @@ function Index() {
       </section>
 
       {/* 11 — CTA FINAL */}
-      <section className="section-base section-dark glow-ambient">
+      <section className="section-base section-dark edge-gold glow-ambient">
         <img
           src={signingWide.url}
           alt=""
           aria-hidden
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-15"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10"
         />
         <div className="shell relative flex flex-col items-center gap-6 text-center">
           <span className="eyebrow text-gold">
             <span className="rule-gold" aria-hidden />
             Próximo passo
           </span>
-          <h2 className="max-w-3xl text-3xl leading-[1.06] font-black text-on-dark sm:text-4xl md:text-5xl">
-            Você já investiu na sua marca. Agora proteja o que está construindo.
+          <h2 className="max-w-xl text-3xl leading-[1.05] font-black text-on-dark sm:text-4xl md:text-[2.9rem]">
+            Dê o primeiro passo hoje.
           </h2>
-          <p className="max-w-2xl text-base text-on-dark-muted md:text-lg">
-            Solicite uma análise e descubra os próximos passos para registrar sua marca no INPI.
+          <p className="max-w-2xl text-base leading-relaxed text-on-dark-muted md:text-lg">
+            Em uma conversa rápida pelo WhatsApp você entende se a sua marca pode ser registrada,
+            quais são os cuidados no pedido e como funciona o acompanhamento junto ao INPI — sem
+            compromisso e falando diretamente com um advogado.
           </p>
           <Cta intent="analisar">Quero analisar minha marca</Cta>
-          <div className="flex flex-col items-center gap-1 text-sm text-on-dark-muted">
+          <div className="flex flex-col items-center gap-1 text-sm text-on-dark-muted sm:flex-row sm:gap-6">
             <span>Atendimento online em todo o Brasil</span>
-            <span>Fale diretamente com um advogado</span>
+            <span className="hidden h-1 w-1 rounded-full bg-gold sm:block" aria-hidden />
+            <span>Resposta direta com o Dr. Ruan</span>
           </div>
         </div>
       </section>
 
-      <footer className="section-light border-t border-border py-8">
-        <div className="shell flex flex-col items-center gap-2 text-center text-xs text-muted-foreground">
-          <span className="font-bold tracking-[0.18em] text-brand uppercase">
-            Dr. Ruan Rodrigues
-          </span>
-          <span>Advocacia — Registro de marcas no INPI · Atendimento online em todo o Brasil</span>
-        </div>
-      </footer>
+      <Footer />
 
       {/* CTA fixo mobile */}
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-gold/25 bg-brand-deep/95 px-4 py-3 backdrop-blur md:hidden">
@@ -496,6 +492,7 @@ function Index() {
           Analisar minha marca
         </a>
       </div>
+
     </main>
   );
 }
