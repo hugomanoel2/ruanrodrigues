@@ -6,6 +6,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Cta, waLink } from "@/components/site/Cta";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
 import ruan1 from "@/assets/ruan-1.png.asset.json";
 import handshake from "@/assets/handshake.jpg.asset.json";
 import signingWide from "@/assets/signing-wide.jpg.asset.json";
@@ -80,36 +82,39 @@ function Head({
 
 function Index() {
   return (
-    <main className="pb-24 md:pb-0">
+    <main id="top" className="pb-24 md:pb-0">
+      <Header />
       {/* 1 — HERO */}
-      <section className="section-base section-dark !pt-16 md:!pt-28 md:!pb-28">
+      <section className="section-base section-dark flex min-h-[82svh] items-center !pt-32 !pb-20 md:!pt-36 md:!pb-28">
         <img
           src={signingWide.url}
           alt="Assinatura de documentos em ambiente corporativo"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full scale-105 object-cover object-center brightness-[2.1] contrast-[0.98] saturate-[0.85]"
           width={1920}
           height={1080}
         />
         <div
-          className="absolute inset-0 bg-[linear-gradient(105deg,var(--brand-deep)_0%,color-mix(in_oklab,var(--brand-deep)_92%,transparent)_38%,color-mix(in_oklab,var(--brand)_55%,transparent)_72%,transparent_100%)]"
+          className="absolute inset-0 bg-[radial-gradient(70%_60%_at_50%_50%,color-mix(in_oklab,var(--brand-deep)_40%,transparent)_0%,color-mix(in_oklab,var(--brand-deep)_66%,transparent)_58%,color-mix(in_oklab,var(--brand-deep)_92%,transparent)_100%)]"
           aria-hidden
         />
         <div
-          className="absolute inset-0 bg-[linear-gradient(to_top,var(--brand-deep)_0%,transparent_55%)]"
+          className="absolute inset-0 bg-[linear-gradient(to_bottom,color-mix(in_oklab,var(--brand-deep)_60%,transparent)_0%,transparent_30%,transparent_62%,var(--brand-deep)_100%)]"
           aria-hidden
         />
+
         <div className="shell relative">
-          <div className="section-head flex max-w-2xl flex-col gap-6">
-            <span className="eyebrow text-gold">
+          <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 rounded-[2.25rem] border border-gold/15 bg-[color-mix(in_oklab,var(--brand-deep)_62%,transparent)] px-6 py-12 text-center shadow-[0_40px_120px_-40px_rgba(0,0,0,0.8)] backdrop-blur-[3px] md:px-14 md:py-16">
+            <span className="eyebrow rounded-full border border-gold/30 bg-[color-mix(in_oklab,black_35%,transparent)] px-4 py-2 text-gold backdrop-blur-sm">
               <span className="rule-gold" aria-hidden />
               Registro de marca · INPI
             </span>
-            <h1 className="text-4xl leading-[1.02] font-black text-on-dark sm:text-5xl md:text-6xl">
+            <h1 className="text-[2.1rem] leading-[1.03] font-black text-on-dark drop-shadow-[0_8px_30px_rgba(0,0,0,0.55)] sm:text-5xl md:text-6xl">
               Proteja a marca que você está construindo.
             </h1>
-            <p className="max-w-xl text-base leading-relaxed text-on-dark-muted md:text-lg">
-              Registro de marca no INPI com análise de viabilidade e acompanhamento jurídico
-              durante o processo.
+            <span className="rule-gold" aria-hidden />
+            <p className="max-w-xl text-base leading-relaxed text-on-dark md:text-lg">
+              Registro de marca no INPI com análise de viabilidade e acompanhamento jurídico durante
+              todo o processo, direto com um advogado.
             </p>
             <div className="pt-2">
               <Cta intent="analisar">Quero analisar minha marca</Cta>
@@ -118,8 +123,9 @@ function Index() {
         </div>
       </section>
 
+
       {/* 2 — PROBLEMA */}
-      <section className="section-base section-light">
+      <section id="problema" className="section-base section-light">
         <div className="shell grid items-center gap-12 md:grid-cols-[1fr_1fr]">
           <Head eyebrow="O ponto cego" title="Ter um CNPJ não significa ter sua marca registrada.">
             <p>
@@ -148,7 +154,7 @@ function Index() {
             ].map(([t, d], i) => (
               <article
                 key={t}
-                className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 text-left shadow-[var(--shadow-soft)] md:p-6"
+                className="card-light flex items-start gap-4 p-5 text-left md:p-6"
               >
                 <span className="font-display mt-0.5 text-sm font-black text-gold">
                   {String(i + 1).padStart(2, "0")}
@@ -165,7 +171,7 @@ function Index() {
 
 
       {/* 3 — RISCO */}
-      <section className="section-base section-dark">
+      <section id="risco" className="section-base section-dark edge-gold">
         <div className="shell">
           <Head
             tone="dark"
@@ -193,7 +199,7 @@ function Index() {
             ].map(([t, d], i) => (
               <article
                 key={t}
-                className="rounded-2xl border border-gold/25 bg-brand-deep/60 p-7 text-center md:text-left"
+                className="card-dark p-7 text-center md:text-left"
               >
                 <span className="font-display text-sm font-black text-gold">
                   {String(i + 1).padStart(2, "0")}
@@ -242,7 +248,7 @@ function Index() {
       </section>
 
       {/* 5 — COMO FUNCIONA */}
-      <section className="section-base section-light">
+      <section id="processo" className="section-base section-light">
         <div className="shell">
           <Head eyebrow="Como funciona" title="Do primeiro contato ao acompanhamento no INPI." />
           <ol className="mt-12 grid gap-6 md:grid-cols-5">
@@ -259,7 +265,7 @@ function Index() {
             ].map(([n, t, d]) => (
               <li
                 key={n}
-                className="relative rounded-2xl border border-border bg-card p-6 text-center md:text-left"
+                className="card-light relative p-6 text-center md:text-left"
               >
                 <span className="font-display block text-4xl leading-none font-black text-brand/25 md:text-5xl">
                   {n}
@@ -277,7 +283,7 @@ function Index() {
       </section>
 
       {/* 6 — BENEFÍCIOS */}
-      <section className="section-base section-tint">
+      <section id="beneficios" className="section-base section-tint">
         <div className="shell">
           <Head eyebrow="Benefícios" title="Uma marca registrada é um ativo do seu negócio." />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -292,7 +298,7 @@ function Index() {
             ].map(([t, d]) => (
               <article
                 key={t}
-                className="rounded-2xl border border-brand/10 bg-card p-7 text-center md:text-left"
+                className="card-light p-7 text-center md:text-left"
               >
                 <span className="rule-gold mx-auto block md:mx-0" aria-hidden />
                 <h3 className="mt-4 text-xl font-extrabold text-brand">{t}</h3>
@@ -304,7 +310,7 @@ function Index() {
       </section>
 
       {/* 7 — DIFERENCIAL */}
-      <section className="section-base section-dark glow-ambient">
+      <section id="diferencial" className="section-base section-dark edge-gold glow-ambient">
         <div className="shell grid items-center gap-12 md:grid-cols-2">
           <div className="framed mx-auto w-full max-w-md">
             <img
@@ -346,7 +352,7 @@ function Index() {
       </section>
 
       {/* 8 — AUTORIDADE */}
-      <section className="section-base section-light">
+      <section id="sobre" className="section-base section-light">
         <div className="shell grid items-center gap-12 md:grid-cols-[1fr_1.1fr]">
           <div className="framed order-2 mx-auto w-full max-w-sm md:order-1">
             <img
@@ -379,7 +385,8 @@ function Index() {
       </section>
 
       {/* 9 — IDENTIFICAÇÃO */}
-      <section className="section-base section-dark">
+      <section id="para-quem" className="section-base section-dark edge-gold">
+
         <div className="shell">
           <Head
             tone="dark"
@@ -397,7 +404,7 @@ function Index() {
             ].map((i) => (
               <span
                 key={i}
-                className="rounded-full border border-gold/30 bg-brand-deep/60 px-5 py-2.5 text-sm font-semibold text-on-dark"
+                className="rounded-full border border-gold/30 bg-[color-mix(in_oklab,white_8%,transparent)] px-5 py-2.5 text-sm font-semibold text-on-dark backdrop-blur-sm"
               >
                 {i}
               </span>
@@ -410,7 +417,8 @@ function Index() {
       </section>
 
       {/* 10 — FAQ */}
-      <section className="section-base section-tint">
+      <section id="faq" className="section-base section-tint">
+
         <div className="shell max-w-3xl">
           <Head eyebrow="FAQ" title="Dúvidas antes de registrar sua marca?" center />
           <Accordion type="single" collapsible className="mt-10 w-full">
@@ -450,40 +458,36 @@ function Index() {
       </section>
 
       {/* 11 — CTA FINAL */}
-      <section className="section-base section-dark glow-ambient">
+      <section className="section-base section-dark edge-gold glow-ambient">
         <img
           src={signingWide.url}
           alt=""
           aria-hidden
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-15"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10"
         />
         <div className="shell relative flex flex-col items-center gap-6 text-center">
           <span className="eyebrow text-gold">
             <span className="rule-gold" aria-hidden />
             Próximo passo
           </span>
-          <h2 className="max-w-3xl text-3xl leading-[1.06] font-black text-on-dark sm:text-4xl md:text-5xl">
-            Você já investiu na sua marca. Agora proteja o que está construindo.
+          <h2 className="max-w-xl text-3xl leading-[1.05] font-black text-on-dark sm:text-4xl md:text-[2.9rem]">
+            Dê o primeiro passo hoje.
           </h2>
-          <p className="max-w-2xl text-base text-on-dark-muted md:text-lg">
-            Solicite uma análise e descubra os próximos passos para registrar sua marca no INPI.
+          <p className="max-w-2xl text-base leading-relaxed text-on-dark-muted md:text-lg">
+            Em uma conversa rápida pelo WhatsApp você entende se a sua marca pode ser registrada,
+            quais são os cuidados no pedido e como funciona o acompanhamento junto ao INPI — sem
+            compromisso e falando diretamente com um advogado.
           </p>
           <Cta intent="analisar">Quero analisar minha marca</Cta>
-          <div className="flex flex-col items-center gap-1 text-sm text-on-dark-muted">
+          <div className="flex flex-col items-center gap-1 text-sm text-on-dark-muted sm:flex-row sm:gap-6">
             <span>Atendimento online em todo o Brasil</span>
-            <span>Fale diretamente com um advogado</span>
+            <span className="hidden h-1 w-1 rounded-full bg-gold sm:block" aria-hidden />
+            <span>Resposta direta com o Dr. Ruan</span>
           </div>
         </div>
       </section>
 
-      <footer className="section-light border-t border-border py-8">
-        <div className="shell flex flex-col items-center gap-2 text-center text-xs text-muted-foreground">
-          <span className="font-bold tracking-[0.18em] text-brand uppercase">
-            Dr. Ruan Rodrigues
-          </span>
-          <span>Advocacia — Registro de marcas no INPI · Atendimento online em todo o Brasil</span>
-        </div>
-      </footer>
+      <Footer />
 
       {/* CTA fixo mobile */}
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-gold/25 bg-brand-deep/95 px-4 py-3 backdrop-blur md:hidden">
@@ -496,6 +500,7 @@ function Index() {
           Analisar minha marca
         </a>
       </div>
+
     </main>
   );
 }
