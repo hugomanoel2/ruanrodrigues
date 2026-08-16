@@ -103,7 +103,7 @@ function Split({
   const textCol = imageSide === "left" ? "md:col-start-2" : "md:col-start-1";
   const imgCol = imageSide === "left" ? "md:col-start-1" : "md:col-start-2";
   return (
-    <div className="shell flex flex-col gap-8 md:grid md:grid-cols-2 md:grid-rows-[auto_auto] md:items-center md:gap-x-12 md:gap-y-6">
+    <div className="shell flex flex-col gap-8 md:grid md:grid-cols-2 md:grid-rows-[auto_auto] md:items-center md:gap-x-12 md:gap-y-3">
       <Reveal className={`${textCol} md:row-start-1`}>
         <Head eyebrow={eyebrow} title={title} tone={tone} />
       </Reveal>
