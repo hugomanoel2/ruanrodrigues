@@ -160,11 +160,114 @@
   width: 100%;
   margin-inline: auto;
   max-width: 76rem;
+@utility section-dark {
+  background: var(--gradient-dark);
+  color: var(--on-dark);
+  isolation: isolate;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.5;
+    background-image:
+      repeating-linear-gradient(
+        transparent 0 3px,
+        color-mix(in oklab, black 22%, transparent) 3px 4px
+      ),
+      radial-gradient(
+        140% 100% at 50% 120%,
+        color-mix(in oklab, black 45%, transparent) 0%,
+        transparent 65%
+      );
+    background-size:
+      100% 4px,
+      100% 100%;
+  }
+}
+
+/* hairline divider entre seções */
+@utility edge-gold {
+  border-top: 1px solid color-mix(in oklab, var(--gold) 28%, transparent);
+}
+
+@utility card-dark {
+  border-radius: calc(var(--radius) + 10px);
+  border: 1px solid color-mix(in oklab, var(--gold) 20%, transparent);
+  background:
+    linear-gradient(
+      160deg,
+      color-mix(in oklab, white 8%, transparent),
+      color-mix(in oklab, black 18%, transparent)
+    );
+  backdrop-filter: blur(2px);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, white 12%, transparent),
+    0 26px 60px -34px black;
+  transition:
+    border-color 220ms ease,
+    transform 220ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in oklab, var(--gold) 45%, transparent);
+  }
+}
+
+@utility card-light {
+  border-radius: calc(var(--radius) + 10px);
+  border: 1px solid color-mix(in oklab, var(--brand) 12%, transparent);
+  background-color: var(--card);
+  box-shadow: 0 22px 50px -34px color-mix(in oklab, var(--brand) 40%, transparent);
+  transition:
+    border-color 220ms ease,
+    transform 220ms ease,
+    box-shadow 220ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in oklab, var(--gold) 55%, transparent);
+    box-shadow: 0 28px 60px -30px color-mix(in oklab, var(--brand) 45%, transparent);
+  }
+}
+
+@utility nav-link {
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: color-mix(in oklab, var(--on-dark) 82%, transparent);
+  transition: color 200ms ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.4rem;
+    height: 1.5px;
+    width: 0;
+    background: var(--gradient-gold);
+    transition: width 220ms ease;
+  }
+  &:hover {
+    color: var(--on-dark);
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+@utility shell {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 76rem;
   padding-inline: 1.25rem;
   @media (width >= 768px) {
     padding-inline: 2rem;
   }
 }
+
 
 @utility eyebrow {
   display: inline-flex;
