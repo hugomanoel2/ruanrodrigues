@@ -410,7 +410,8 @@ function Index() {
       </section>
 
       {/* 10 — FAQ */}
-      <section className="section-base section-tint">
+      <section id="faq" className="section-base section-tint">
+
         <div className="shell max-w-3xl">
           <Head eyebrow="FAQ" title="Dúvidas antes de registrar sua marca?" center />
           <Accordion type="single" collapsible className="mt-10 w-full">
