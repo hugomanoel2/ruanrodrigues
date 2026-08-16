@@ -103,7 +103,7 @@ function Index() {
         />
 
         <div className="shell relative">
-          <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
+          <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 rounded-[2.25rem] bg-[color-mix(in_oklab,var(--brand-deep)_62%,transparent)] px-6 py-12 text-center shadow-[0_40px_120px_-40px_rgba(0,0,0,0.8)] backdrop-blur-[3px] md:px-14 md:py-16">
             <span className="eyebrow rounded-full border border-gold/30 bg-[color-mix(in_oklab,black_35%,transparent)] px-4 py-2 text-gold backdrop-blur-sm">
               <span className="rule-gold" aria-hidden />
               Registro de marca · INPI
@@ -112,7 +112,7 @@ function Index() {
               Proteja a marca que você está construindo.
             </h1>
             <span className="rule-gold" aria-hidden />
-            <p className="max-w-xl text-base leading-relaxed text-on-dark-muted md:text-lg">
+            <p className="max-w-xl text-base leading-relaxed text-on-dark md:text-lg">
               Registro de marca no INPI com análise de viabilidade e acompanhamento jurídico durante
               todo o processo, direto com um advogado.
             </p>
