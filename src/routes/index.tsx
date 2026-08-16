@@ -491,7 +491,7 @@ function Index() {
           href={waLink("analisar")}
           target="_blank"
           rel="noopener noreferrer"
-          className="cta-glow flex w-full items-center justify-center px-6 py-3.5 text-sm"
+          className="btn-base btn-gold flex w-full px-6 py-3.5 text-sm"
         >
           Analisar minha marca
         </a>
