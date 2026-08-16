@@ -13,6 +13,7 @@ import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 import ruan1 from "@/assets/ruan-1.png.asset.json";
 import handshake from "@/assets/handshake.jpg.asset.json";
 import signingWide from "@/assets/signing-wide.jpg.asset.json";
+import heroLoop from "@/assets/hero-loop.mp4.asset.json";
 import signingForm from "@/assets/signing-form.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -126,16 +127,21 @@ function Split({
 
 function Index() {
   return (
-    <main id="top" className="pb-24 md:pb-0">
+    <main id="top">
       <Header />
       {/* 1 — HERO */}
       <section className="section-base section-dark flex min-h-[82svh] items-center !pt-32 !pb-20 md:!pt-36 md:!pb-28">
-        <img
-          src={signingWide.url}
-          alt="Assinatura de documentos em ambiente corporativo"
-          className="absolute inset-0 h-full w-full scale-105 object-cover object-center brightness-[2.1] contrast-[0.98] saturate-[0.85]"
-          width={1920}
-          height={1080}
+        <video
+          className="absolute inset-0 h-full w-full scale-105 object-cover object-center brightness-[1.9] contrast-[0.98] saturate-[0.8]"
+          src={heroLoop.url}
+          poster={signingWide.url}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          disablePictureInPicture
+          aria-hidden
         />
         <div
           className="absolute inset-0 bg-[radial-gradient(70%_60%_at_50%_50%,color-mix(in_oklab,var(--brand-deep)_40%,transparent)_0%,color-mix(in_oklab,var(--brand-deep)_66%,transparent)_58%,color-mix(in_oklab,var(--brand-deep)_92%,transparent)_100%)]"
@@ -554,17 +560,6 @@ function Index() {
 
       <WhatsAppFab />
 
-      {/* CTA fixo mobile */}
-      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-gold/25 bg-brand-deep/95 px-4 py-3 backdrop-blur md:hidden">
-        <a
-          href={waLink("analisar")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-base btn-gold flex w-full px-6 py-3.5 text-sm"
-        >
-          Analisar minha marca
-        </a>
-      </div>
     </main>
   );
 }
