@@ -6,6 +6,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Cta, waLink } from "@/components/site/Cta";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
 import ruan1 from "@/assets/ruan-1.png.asset.json";
 import handshake from "@/assets/handshake.jpg.asset.json";
 import signingWide from "@/assets/signing-wide.jpg.asset.json";
@@ -80,7 +82,8 @@ function Head({
 
 function Index() {
   return (
-    <main className="pb-24 md:pb-0">
+    <main id="top" className="pb-24 md:pb-0">
+      <Header />
       {/* 1 — HERO */}
       <section className="section-base section-dark !pt-16 md:!pt-28 md:!pb-28">
         <img
@@ -119,7 +122,7 @@ function Index() {
       </section>
 
       {/* 2 — PROBLEMA */}
-      <section className="section-base section-light">
+      <section id="problema" className="section-base section-light">
         <div className="shell grid items-center gap-12 md:grid-cols-[1fr_1fr]">
           <Head eyebrow="O ponto cego" title="Ter um CNPJ não significa ter sua marca registrada.">
             <p>
@@ -148,7 +151,7 @@ function Index() {
             ].map(([t, d], i) => (
               <article
                 key={t}
-                className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 text-left shadow-[var(--shadow-soft)] md:p-6"
+                className="card-light flex items-start gap-4 p-5 text-left md:p-6"
               >
                 <span className="font-display mt-0.5 text-sm font-black text-gold">
                   {String(i + 1).padStart(2, "0")}
@@ -165,7 +168,7 @@ function Index() {
 
 
       {/* 3 — RISCO */}
-      <section className="section-base section-dark">
+      <section id="risco" className="section-base section-dark edge-gold">
         <div className="shell">
           <Head
             tone="dark"
@@ -193,7 +196,7 @@ function Index() {
             ].map(([t, d], i) => (
               <article
                 key={t}
-                className="rounded-2xl border border-gold/25 bg-brand-deep/60 p-7 text-center md:text-left"
+                className="card-dark p-7 text-center md:text-left"
               >
                 <span className="font-display text-sm font-black text-gold">
                   {String(i + 1).padStart(2, "0")}
@@ -242,7 +245,7 @@ function Index() {
       </section>
 
       {/* 5 — COMO FUNCIONA */}
-      <section className="section-base section-light">
+      <section id="processo" className="section-base section-light">
         <div className="shell">
           <Head eyebrow="Como funciona" title="Do primeiro contato ao acompanhamento no INPI." />
           <ol className="mt-12 grid gap-6 md:grid-cols-5">
@@ -259,7 +262,7 @@ function Index() {
             ].map(([n, t, d]) => (
               <li
                 key={n}
-                className="relative rounded-2xl border border-border bg-card p-6 text-center md:text-left"
+                className="card-light relative p-6 text-center md:text-left"
               >
                 <span className="font-display block text-4xl leading-none font-black text-brand/25 md:text-5xl">
                   {n}
@@ -277,7 +280,7 @@ function Index() {
       </section>
 
       {/* 6 — BENEFÍCIOS */}
-      <section className="section-base section-tint">
+      <section id="beneficios" className="section-base section-tint">
         <div className="shell">
           <Head eyebrow="Benefícios" title="Uma marca registrada é um ativo do seu negócio." />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -292,7 +295,7 @@ function Index() {
             ].map(([t, d]) => (
               <article
                 key={t}
-                className="rounded-2xl border border-brand/10 bg-card p-7 text-center md:text-left"
+                className="card-light p-7 text-center md:text-left"
               >
                 <span className="rule-gold mx-auto block md:mx-0" aria-hidden />
                 <h3 className="mt-4 text-xl font-extrabold text-brand">{t}</h3>
@@ -304,7 +307,7 @@ function Index() {
       </section>
 
       {/* 7 — DIFERENCIAL */}
-      <section className="section-base section-dark glow-ambient">
+      <section id="diferencial" className="section-base section-dark edge-gold glow-ambient">
         <div className="shell grid items-center gap-12 md:grid-cols-2">
           <div className="framed mx-auto w-full max-w-md">
             <img
@@ -346,7 +349,7 @@ function Index() {
       </section>
 
       {/* 8 — AUTORIDADE */}
-      <section className="section-base section-light">
+      <section id="sobre" className="section-base section-light">
         <div className="shell grid items-center gap-12 md:grid-cols-[1fr_1.1fr]">
           <div className="framed order-2 mx-auto w-full max-w-sm md:order-1">
             <img
@@ -398,7 +401,7 @@ function Index() {
             ].map((i) => (
               <span
                 key={i}
-                className="rounded-full border border-gold/30 bg-brand-deep/60 px-5 py-2.5 text-sm font-semibold text-on-dark"
+                className="rounded-full border border-gold/30 bg-[color-mix(in_oklab,white_8%,transparent)] px-5 py-2.5 text-sm font-semibold text-on-dark backdrop-blur-sm"
               >
                 {i}
               </span>
