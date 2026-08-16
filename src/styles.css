@@ -154,15 +154,6 @@
 @utility section-dark {
   background: var(--gradient-dark);
   color: var(--on-dark);
-}
-
-@utility shell {
-  width: 100%;
-  margin-inline: auto;
-  max-width: 76rem;
-@utility section-dark {
-  background: var(--gradient-dark);
-  color: var(--on-dark);
   isolation: isolate;
 
   &::after {
