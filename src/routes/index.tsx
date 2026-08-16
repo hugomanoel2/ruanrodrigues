@@ -127,7 +127,7 @@ function Split({
 
 function Index() {
   return (
-    <main id="top" className="pb-24 md:pb-0">
+    <main id="top">
       <Header />
       {/* 1 — HERO */}
       <section className="section-base section-dark flex min-h-[82svh] items-center !pt-32 !pb-20 md:!pt-36 md:!pb-28">
@@ -560,17 +560,6 @@ function Index() {
 
       <WhatsAppFab />
 
-      {/* CTA fixo mobile */}
-      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-gold/25 bg-brand-deep/95 px-4 py-3 backdrop-blur md:hidden">
-        <a
-          href={waLink("analisar")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-base btn-gold flex w-full px-6 py-3.5 text-sm"
-        >
-          Analisar minha marca
-        </a>
-      </div>
     </main>
   );
 }
