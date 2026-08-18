@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { waLink } from "./Cta";
+import logoAsset from "@/assets/logo-rr.png.asset.json";
 
 const LINKS = [
   { href: "#problema", label: "Por que registrar" },
