@@ -1,4 +1,5 @@
 import { waLink } from "./Cta";
+import logoAsset from "@/assets/logo-rr.png.asset.json";
 
 const COLS = [
   {
