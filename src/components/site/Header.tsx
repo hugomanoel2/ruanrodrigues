@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { waLink } from "./Cta";
+import logoAsset from "@/assets/logo-rr.png.asset.json";
 
 const LINKS = [
   { href: "#problema", label: "Por que registrar" },
@@ -29,14 +30,22 @@ export function Header() {
       }`}
     >
       <div className="shell flex h-16 items-center justify-between gap-6 md:h-20">
-        <a href="#top" className="flex flex-col leading-none">
-          <span className="font-display text-sm font-black tracking-[0.14em] text-on-dark uppercase md:text-base">
-            Ruan Rodrigues
-          </span>
-          <span className="mt-1 text-[0.6rem] font-semibold tracking-[0.26em] text-gold uppercase">
-            Advocacia · Marcas
+        <a href="#top" className="flex items-center gap-3">
+          <img
+            src={logoAsset.url}
+            alt="Ruan Rodrigues Advocacia"
+            className="h-8 w-auto md:h-10"
+          />
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-sm font-black tracking-[0.14em] text-on-dark uppercase md:text-base">
+              Ruan Rodrigues
+            </span>
+            <span className="mt-1 text-[0.6rem] font-semibold tracking-[0.26em] text-gold uppercase">
+              Advocacia · Marcas
+            </span>
           </span>
         </a>
+
 
         <nav className="hidden items-center gap-8 lg:flex">
           {LINKS.map((l) => (

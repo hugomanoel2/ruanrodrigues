@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -126,23 +127,48 @@ function Split({
 }
 
 function Index() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    v.defaultMuted = true;
+    v.volume = 0;
+    const tryPlay = () => {
+      v.play().catch(() => {});
+    };
+    tryPlay();
+    v.addEventListener("loadeddata", tryPlay);
+    document.addEventListener("visibilitychange", tryPlay);
+    document.addEventListener("touchstart", tryPlay, { once: true });
+    return () => {
+      v.removeEventListener("loadeddata", tryPlay);
+      document.removeEventListener("visibilitychange", tryPlay);
+      document.removeEventListener("touchstart", tryPlay);
+    };
+  }, []);
+
   return (
     <main id="top">
       <Header />
       {/* 1 — HERO */}
       <section className="section-base section-dark flex min-h-[82svh] items-center !pt-32 !pb-20 md:!pt-36 md:!pb-28">
         <video
-          className="absolute inset-0 h-full w-full scale-105 object-cover object-center brightness-[1.9] contrast-[0.98] saturate-[0.8]"
+          ref={videoRef}
+          className="pointer-events-none absolute inset-0 h-full w-full scale-105 object-cover object-center brightness-[1.9] contrast-[0.98] saturate-[0.8]"
           src={heroLoop}
           poster={signingWide}
           autoPlay
           loop
           muted
           playsInline
-          preload="metadata"
+          controls={false}
+          preload="auto"
           disablePictureInPicture
           aria-hidden
         />
+
         <div
           className="absolute inset-0 bg-[radial-gradient(70%_60%_at_50%_50%,color-mix(in_oklab,var(--brand-deep)_40%,transparent)_0%,color-mix(in_oklab,var(--brand-deep)_66%,transparent)_58%,color-mix(in_oklab,var(--brand-deep)_92%,transparent)_100%)]"
           aria-hidden

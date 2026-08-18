@@ -1,4 +1,5 @@
 import { waLink } from "./Cta";
+import logoAsset from "@/assets/logo-rr.png.asset.json";
 
 const COLS = [
   {
@@ -26,13 +27,19 @@ export function Footer() {
     <footer className="relative overflow-hidden border-t border-brand/10 bg-card pt-16 pb-10 text-ink">
       <div className="shell relative">
         <div className="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
-          <div className="text-center md:text-left">
-            <span className="font-display block text-base font-black tracking-[0.14em] text-brand uppercase">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+            <img
+              src={logoAsset.url}
+              alt="Ruan Rodrigues Advocacia"
+              className="h-12 w-auto brightness-0"
+            />
+            <span className="font-display mt-4 block text-base font-black tracking-[0.14em] text-brand uppercase">
               Ruan Rodrigues
             </span>
             <span className="mt-1 block text-[0.62rem] font-semibold tracking-[0.26em] text-brand-soft uppercase">
               Advocacia · Marcas
             </span>
+
             <p className="mx-auto mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground md:mx-0">
               Registro e proteção de marcas no INPI, com análise de viabilidade e acompanhamento do
               processo. Atendimento online em todo o Brasil.
