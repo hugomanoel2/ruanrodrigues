@@ -39,8 +39,7 @@ export function Header() {
           <span className="font-display text-sm font-black tracking-[0.14em] text-on-dark uppercase md:text-base">
             Ruan Rodrigues
           </span>
-        </span>
-      </a>
+        </a>
 
 
         <nav className="hidden items-center gap-8 lg:flex">
