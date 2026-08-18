@@ -36,15 +36,11 @@ export function Header() {
             alt="Ruan Rodrigues Advocacia"
             className="h-8 w-auto md:h-10"
           />
-          <span className="flex flex-col leading-none">
-            <span className="font-display text-sm font-black tracking-[0.14em] text-on-dark uppercase md:text-base">
-              Ruan Rodrigues
-            </span>
-            <span className="mt-1 text-[0.6rem] font-semibold tracking-[0.26em] text-gold uppercase">
-              Advocacia · Marcas
-            </span>
+          <span className="font-display text-sm font-black tracking-[0.14em] text-on-dark uppercase md:text-base">
+            Ruan Rodrigues
           </span>
-        </a>
+        </span>
+      </a>
 
 
         <nav className="hidden items-center gap-8 lg:flex">

@@ -468,7 +468,6 @@ function Index() {
                   Atendimento individual desde a análise inicial até o acompanhamento do processo
                   perante o INPI.
                 </p>
-                <p className="text-sm font-bold tracking-[0.18em] text-brand uppercase">OAB [NÚMERO]</p>
                 <div className="flex justify-center pt-2 md:justify-start">
                   <Cta intent="analisar">Quero falar com o Dr. Ruan</Cta>
                 </div>

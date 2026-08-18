@@ -36,9 +36,6 @@ export function Footer() {
             <span className="font-display mt-4 block text-base font-black tracking-[0.14em] text-brand uppercase">
               Ruan Rodrigues
             </span>
-            <span className="mt-1 block text-[0.62rem] font-semibold tracking-[0.26em] text-brand-soft uppercase">
-              Advocacia · Marcas
-            </span>
 
             <p className="mx-auto mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground md:mx-0">
               Registro e proteção de marcas no INPI, com análise de viabilidade e acompanhamento do
