@@ -1,5 +1,5 @@
 import { waLink } from "./Cta";
-import logoAsset from "@/assets/logo-rr.png.asset.json";
+import logoUrl from "@/assets/logo-rr.webp";
 
 const COLS = [
   {
@@ -29,7 +29,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <img
-              src={logoAsset.url}
+              src={logoUrl}
               alt="Ruan Rodrigues Advocacia"
               className="h-12 w-auto brightness-0"
             />

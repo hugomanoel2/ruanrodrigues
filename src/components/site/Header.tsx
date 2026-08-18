@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { waLink } from "./Cta";
-import logoAsset from "@/assets/logo-rr.png.asset.json";
+import logoUrl from "@/assets/logo-rr.webp";
 
 const LINKS = [
   { href: "#problema", label: "Por que registrar" },
@@ -32,7 +32,7 @@ export function Header() {
       <div className="shell flex h-16 items-center justify-between gap-6 md:h-20">
         <a href="#top" className="flex items-center gap-3">
           <img
-            src={logoAsset.url}
+            src={logoUrl}
             alt="Ruan Rodrigues Advocacia"
             className="h-8 w-auto md:h-10"
           />
